@@ -1,3 +1,10 @@
+---
+layout: default
+title: Simulator
+subtitle: Commands and options
+---
+
+
 # LG Simulator
 
 When referring to the simulator, we mean the Unity build of the game that you are able to interact with using http requests.

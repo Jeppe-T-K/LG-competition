@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Setup
-permalink: /setup/
+title: Setting it up
+subtitle: Docker and Python
 ---
 
 # Overview
