@@ -25,10 +25,10 @@ class BaseSimulator(object):
             'returnFullState': return_full_state
         })
 
-    def session_click(self, session_id: str, x: int, y: int, return_full_state: bool = False) -> any:
+    def session_click(self, sessionId: str, x: int, y: int, return_full_state: bool = False) -> any:
         try:
             result = self._do_request('/session/click', {
-                'sessionId': session_id,
+                'sessionId': sessionId,
                 'x': x,
                 'y': y,
                 'returnFullState': return_full_state
@@ -36,7 +36,7 @@ class BaseSimulator(object):
         except requests.HTTPError as e:  # Workaround because error sometimes occurs
             print(e)
             result = self._do_request('/session/click', {
-                'sessionId': session_id,
+                'sessionId': sessionId,
                 'x': x,
                 'y': y,
                 'returnFullState': return_full_state
@@ -44,14 +44,14 @@ class BaseSimulator(object):
 
         return result
 
-    def session_destroy(self, session_id: str) -> any:
+    def session_destroy(self, sessionId: str) -> any:
         return self._do_request('/session/destroy', {
-            'sessionId': session_id
+            'sessionId': sessionId
         })
 
-    def session_status(self, session_id: str) -> any:
+    def session_status(self, sessionId: str) -> any:
         return self._do_request('/session/status', {
-            'sessionId': session_id
+            'sessionId': sessionId
         })
 
     def sessions_list(self) -> any:
@@ -71,12 +71,12 @@ class Simulator(BaseSimulator):
 
     def __init__(self, host: str, **kwargs):
         super().__init__(host, **kwargs)
-        self.session_id = None
+        self.sessionId = None
         self.return_full_states = kwargs.get('return_full_state', False)
 
     def reset(self, level: int, seed: int) -> dict:
-        if self.session_id is not None:
-            self.session_destroy(self.session_id)
+        if self.sessionId is not None:
+            self.session_destroy(self.sessionId)
 
         try:
             created_level = self.load(level, seed)
@@ -85,14 +85,14 @@ class Simulator(BaseSimulator):
             created_level = {}
             session_result = {}
 
-        self.session_id = session_result.get('sessionId', None)
+        self.sessionId = session_result.get('sessionId', None)
 
         return created_level
 
     def step(self, x: int, y: int, **kwargs) -> dict:
         try:
             results = self.session_click(
-                kwargs.get('session_id', self.session_id),
+                kwargs.get('sessionId', self.sessionId),
                 x,
                 y,
                 self.return_full_states)
@@ -101,4 +101,4 @@ class Simulator(BaseSimulator):
         return results
 
     def close(self):
-        self.session_destroy(self.session_id)
+        self.session_destroy(self.sessionId)
