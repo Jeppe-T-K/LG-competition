@@ -6,7 +6,7 @@
 # --- Required options --- #
 
 # Name of website
-title: LG Competition
+title: Lily's Garden Completion Rate Prediction
 
 # Your name to show in the footer
 author: Jeppe Theiss Kristensen
@@ -14,10 +14,11 @@ author: Jeppe Theiss Kristensen
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  About The Competition: "about"
-  Setup: "setup"
+  About the competition: "about"
+  Getting started: "setup"
   Resources:
     - The Game: "gameinfo"
+    - Levels: "levels"
     - Simulator: "simulator"
     - Environment: "environment"
   Tactile Games: "https://tactilegames.com/"

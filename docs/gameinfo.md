@@ -4,6 +4,16 @@ title: Lily's Garden
 subtitle: Rules of the game
 ---
 
-# Info about the game
+# Match-3 Game logic
 
-Test test
+
+# Board pieces
+
+
+
+### Basic tile
+
+### Power pieces
+
+
+### Hard blocker

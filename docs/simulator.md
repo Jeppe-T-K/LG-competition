@@ -1,6 +1,6 @@
 ---
-layout: default
-title: Simulator
+layout: page
+title: The Simulator
 subtitle: Commands and options
 ---
 
@@ -8,19 +8,6 @@ subtitle: Commands and options
 # LG Simulator
 
 When referring to the simulator, we mean the Unity build of the game that you are able to interact with using http requests.
-
-# Setup
-
-## Docker
-The easiest way to get started is to use Docker and fetch the simulator image.
-
-To to this, bla bla
-
-## Linux binary
-
-
-
-# Interacting with the simulator
 
 ## HTTP API
 

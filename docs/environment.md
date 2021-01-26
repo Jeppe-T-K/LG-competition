@@ -1,7 +1,7 @@
 ---
-layout: default
-title: Setting it up
-subtitle: Docker and Python
+layout: page
+title: Environment
+subtitle: OpenAI Gym implementation
 ---
 
 # Game environment
