@@ -23,14 +23,14 @@ To begin with, make sure you have Docker installed. To find instructions on how 
 Once Docker is installed, pull the `lg-simulator-competition` image from the public Docker repository:
 
 ```
-docker pull docker.com/repo/blalba
+docker pull jeppetk/lg-competition
 ```
 
 #### Run
 Run the container in the background:
 
 ```
-docker run -p 8090:8080 -dt --name lg-simulator-local lg-simulator
+docker run -p 8090:8080 -dt --name lg-simulator  jeppetk/lg-competition
 ```
 
 #### Test
