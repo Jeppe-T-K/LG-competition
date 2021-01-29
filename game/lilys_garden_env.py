@@ -32,6 +32,7 @@ class LilysGardenEnv(gym.Env):
         self.max_total_steps = None
         self.valid_steps = 0
         self.total_steps = 0
+        self.collect_goal_goal = 0
         self.sim_seed = None
         self.board_size = (13, 9)
         self.channels = 24  # 24 from sim + action mask from env
@@ -49,7 +50,6 @@ class LilysGardenEnv(gym.Env):
 
         self.valid_steps = 0
         self.total_steps = 0
-        self.valid_actions = [1] * self.action_space.n
         sim_seed = np.random.randint(1, 2 ** 31 - 1) if seed is None else seed
         self.sim_seed = sim_seed
         new_board = self.simulator.reset(self.get_level(), sim_seed)
@@ -58,7 +58,6 @@ class LilysGardenEnv(gym.Env):
             self.board_state = json.loads(obs)
         else:
             self.board_state = None
-
         self.latest_observation = self._observation_from_state()
         self.current_progress = self._calculate_progress()
 
@@ -74,11 +73,8 @@ class LilysGardenEnv(gym.Env):
 
         observation = self._observation_from_state()
         self.latest_observation = observation
-
         self.valid_steps += 1 * valid_action
-        self.valid_actions[action] = 1 * valid_action
-
-        goal_reached = (new_progress <= 1e-6)
+        goal_reached = self.board_state['collectGoalRemaining'] < 1e-6
         self.total_steps += 1
         info_dict = dict(valid_steps=self.valid_steps,
                          total_steps=self.total_steps,
@@ -91,7 +87,6 @@ class LilysGardenEnv(gym.Env):
 
         # Should the env be reset?
         done = goal_reached
-
         self.current_progress = new_progress
 
         return observation, reward, done, info_dict
@@ -110,7 +105,7 @@ class LilysGardenEnv(gym.Env):
 
     def _calculate_progress(self):
         try:
-            progress = sum(self.board_state['goal'].values())
+            progress = self.board_state['collectGoalGoal'] - self.board_state['collectGoalRemaining']
         except (TypeError, KeyError):
             progress = self.current_progress
         return progress

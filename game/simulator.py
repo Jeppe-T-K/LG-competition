@@ -19,9 +19,16 @@ class BaseSimulator(object):
             'y': y
         })
 
-    def session_create(self, state: any, return_full_state: bool = False) -> any:
+    # def session_create(self, state: any, return_full_state: bool = False) -> any:
+    #     return self._do_request('/session/create', {
+    #         'state': state,
+    #         'returnFullState': return_full_state
+    #     })
+
+    def session_create(self, level: int, seed: int, return_full_state: bool = False) -> any:
         return self._do_request('/session/create', {
-            'state': state,
+            'levelIndex': level,
+            'seed': seed,
             'returnFullState': return_full_state
         })
 
@@ -79,15 +86,14 @@ class Simulator(BaseSimulator):
             self.session_destroy(self.sessionId)
 
         try:
-            created_level = self.load(level, seed)
-            session_result = self.session_create(json.loads(created_level['state']), self.return_full_states)
-        except requests.exceptions.HTTPError:
+            session_result = self.session_create(level=level, seed=seed, return_full_state=self.return_full_states)
+        except requests.exceptions.HTTPError as e:
             created_level = {}
             session_result = {}
 
         self.sessionId = session_result.get('sessionId', None)
 
-        return created_level
+        return session_result
 
     def step(self, x: int, y: int, **kwargs) -> dict:
         try:
