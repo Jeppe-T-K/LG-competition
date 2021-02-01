@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Announcing the Competition
-subtitle: Why and how
+subtitle: Lily's Garden Playtest Agent
 cover-img: /assets/img/path.jpg
 thumbnail-img: /assets/img/thumb.png
 share-img: /assets/img/path.jpg
