@@ -9,7 +9,7 @@
 title: Tactile Games Playtest Agent Competition
 
 # Your name to show in the footer
-author: Jeppe Theiss Kristensen
+author: Tactile Games Data Science Team
 
 # --- List of links in the navigation bar --- #
 
@@ -43,8 +43,8 @@ round-avatar: true
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
   email: "jetk@itu.dk"
-  facebook: jeppetk
-  github: Jeppe-T-K
+# facebook: jeppetk
+# github: Jeppe-T-K
   twitter: JeppeTK
 #  patreon: DeanAttali
 #  youtube: c/daattali

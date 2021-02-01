@@ -20,9 +20,32 @@ The purpose for providing this is to get started quickly, but you are free to mo
 ### Action space
 
 
+
 ### Observation space
 
-Board state
+Channel | Name | Description
+--- | --- | ---
+0 | Cell | Activated parts of the game board where board pieces can fill up the space.
+1-6 | Colours | Layer representing each of the 6 colors. All colors are mechanically the same.
+7-8 | Clickable true/false| Whether a board piece may be clickable. Clickable board pieces are basic tile and power pieces but it does **NOT** imply tapping on said piece is a valid move. Any other board piece is non-clickable, such as rocks or other kinds of blockers.
+9 | Collectgoal | Remaining collectgoal in the specific coordinate.
+10 | Basic piece | Standard board piece.
+11 | Bomb | Bomb power pieces.
+12 | Flask | Flask power piece.
+13-14 | Rocket horizontal/vertical | Rocket power piece with the direction.
+15 | Gravity | Whether a board piece has gravity. If so, the board piece will fall down if the cell below is empty. Otherwise it will stay in place.
+16 | Spreadable | Typically grass pieces which can spread if none of the pieces are attacked in the previous.
+17 | Healable | Regenerates 1 HP if not attacked, requiring two or more consecutive attacks to clear.
+18 | Spawner | Will spawn some board piece (typically collectgoals) when attacked.
+19 | Colorable | Can take on the color the piece is attack with or random if done with power piece.
+20-23 | Hittable by piece / neighbor / power / cluster | How a board piece can be attacked. 
+
+
+#### Board state
+
+The
+
+
 
 ### Reward
 
