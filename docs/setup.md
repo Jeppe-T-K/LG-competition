@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Setting it up
-subtitle: Docker and Python
+subtitle: Using Docker and Python
 ---
 
 # Overview

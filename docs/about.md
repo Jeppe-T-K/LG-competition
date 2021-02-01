@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Tactile Games Playtest Agent Competition
+title: Tactile Games Playtest Agent
 subtitle: Completion Rate Prediction of Lily's Garden Levels
 gh-repo: Jeppe-T-K/LG-competition
 ---
 
 # Overview
 
-The Tactile Games Playtest Agent Competition is based on the mobile puzzle game Lily's Garden - a match-3 style puzzle game where player must complete the levels within a given number of moves.
+The Tactile Games Playtest Agent competition is based on the mobile puzzle game Lily's Garden - a match-3 style puzzle game where player must complete the levels within a given number of moves.
 The objective of this competition is to accurately predict the player completion rate of these puzzle levels.
 The main research contribution of the competition is not how to optimally plan and play games but rather how to create playtesting methods that are conditioned by aggregated player behavior data across millions of players.
 

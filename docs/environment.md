@@ -94,9 +94,10 @@ Name | Type | Description
 `total_steps`|**int**|Total number of steps taken in environment
 `successful_click` | **bool** | Whether the previous action was valid or not
 
-### Methods
 
+# Example gameplay
 
-# Example gameplay loop
-The gameplay loop of this method is as follow:
-1. To start a new game
+In the github repository is an example of a random agent playing the game
+
+## Render
+A visualisation method has not been implemented yet.
