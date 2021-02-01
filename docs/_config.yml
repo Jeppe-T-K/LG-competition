@@ -6,7 +6,7 @@
 # --- Required options --- #
 
 # Name of website
-title: Tactile Games Playtest Agent Competition
+title: Playtest Agent
 
 # Your name to show in the footer
 author: Tactile Games Data Science Team
@@ -17,7 +17,7 @@ navbar-links:
   About the competition: "about"
   Getting started: "setup"
   Resources:
-#    - The Game: "gameinfo"
+    - The Game: "gameinfo"
     - Environment: "environment"
     - Simulator: "simulator"
     - Levels: "levels"
@@ -46,7 +46,8 @@ round-avatar: true
 # Select the social network links that you want to show in the footer.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "jetk@itu.dk"
+  email: "aicompetition@tactilegames.com"
+  # email: "jetk@itu.dk"
 # facebook: jeppetk
 # github: Jeppe-T-K
   twitter: JeppeTK
@@ -101,17 +102,6 @@ feed_show_tags: true
 # --- Colours / background image --- #
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
-
-# navbar-col: "#160826"
-# navbar-text-col: "#ffffff"
-# navbar-border-col: "#EAEAEA"
-# page-col: "#FFFFFF"
-# text-col: "#404040"
-# link-col: "#008AFF"
-# hover-col: "#0085A1"
-# footer-col: "#160826"
-# footer-text-col: "#ffffff"
-# footer-link-col: "#404040"
 
 navbar-col: "#160826"
 navbar-text-col: "#ffffff"

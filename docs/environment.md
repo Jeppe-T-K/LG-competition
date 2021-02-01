@@ -24,6 +24,8 @@ Since the game board has 9 rows and 13 columns, there are 9 * 13 = 117 possible 
 
 ### Observation space
 
+#### Board representation
+
 Since there are about 40 distinct game board pieces and additional permutations with color, we have chosen to describe the game board using attributes of the pieces in each position. For this, we have chosen the `m=24` mechanics listed below, leading to a 3D observation space with shape `(9 x 13 x m)`. The hitpoints of the board piece is used to represent the piece in the respective layer. If multiple pieces are stacked on top of each other, the hitpoints in the respective cells are simply added together.
 
 Channel | Name | Description
@@ -74,6 +76,15 @@ Name | Type | Description
 `collectGoalGoal`|**int**|Required collectgoals to complete level. Only valid in the 0'th step (reset).
 
 
+### Info dictionary
+When taking a `step`, additional information is provided in the
+
+Name | Type | Description
+--- | --- | ---
+`valid_steps`|**int**|Number of valid steps taken in environment
+`total_steps`|**int**|Total number of steps taken in environment
+`successful_click` | **bool** | Whether the previous action was valid or not
+
 ### Reward
 
 The current reward function gives the following rewards per step:
@@ -82,22 +93,36 @@ The current reward function gives the following rewards per step:
 * -0.5 if invalid step
 * +5 for winning level
 
-## Additions to the environment
-There are a few other attributes and methods of the environment that may be relevant to consider.
-
-### Info
-When taking a step, a dictionary with additional information is also returned. The contents of this are
-
-Name | Type | Description
---- | --- | ---
-`valid_steps`|**int**|Number of valid steps taken in environment
-`total_steps`|**int**|Total number of steps taken in environment
-`successful_click` | **bool** | Whether the previous action was valid or not
-
 
 # Example gameplay
 
-In the github repository is an example of a random agent playing the game
+In the [github repository](https://github.com/Jeppe-T-K/LG-competition/blob/main/examples/random_agent.py) is an example of a random agent playing the game:
+
+```python
+import gym
+from game.simulator import Simulator
+
+# Loading in simulator and environment
+sim = Simulator(host="http://localhost:8090")
+env = gym.make('lg-competition-v0', level=1, simulator=sim)
+
+# To start a new playthrough, reset environment first to get initial obs. space
+obs = env.reset(seed=42)
+
+# Taking a random step in env:
+action = env.action_space.sample()  # OpenAI Gym build-in random sampling
+
+obs, reward, done, info_dict = env.step(action)
+
+# Continuing until level is complete:
+rewards = reward
+while not done:
+    action = env.action_space.sample()  # OpenAI Gym build-in random sampling
+    obs, reward, done, info_dict = env.step(action)
+    rewards += reward
+...
+```
+
 
 ## Render
 A visualisation method has not been implemented yet.

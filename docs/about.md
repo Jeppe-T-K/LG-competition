@@ -26,7 +26,7 @@ To get started accessing the game simulator, visit the [Getting Started](setup) 
 
 ## Levels and data
 
-For the purpose of this competition, the provided simulator is able to simulate 100 levels. In addition to this, we also provide the player move limit and completion rate.
+For the purpose of this competition, the provided simulator is able to simulate 110 levels. In addition to this, we also provide the player move limit and completion rate.
 
 An overview of the levels along with the data can be found on the [Levels](levels) page.
 

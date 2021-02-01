@@ -22,21 +22,21 @@ To begin with, make sure you have Docker installed. To find instructions on how 
 
 Once Docker is installed, pull the `lg-simulator-competition` image from the public Docker repository:
 
-```
+```sh
 docker pull jeppetk/lg-competition
 ```
 
 #### Run
 Run the container in the background:
 
-```
-docker run -p 8090:8080 -dt --name lg-simulator  jeppetk/lg-competition
+```sh
+docker run -p 8090:8080 -dt --name lg-simulator jeppetk/lg-competition
 ```
 
 #### Test
 Test that the simulator server is running by visiting the following URL:
 
-```
+```sh
 curl http://localhost:8090/ping
 ```
 
@@ -57,7 +57,7 @@ Below are instructions on how to get set up with [virtualenv](https://virtualenv
 
 First get the LG-competetion files from Github:
 
-```
+```sh
 git clone https://github.com/Jeppe-T-K/LG-competition.git
 cd LG-competition
 ```
@@ -66,7 +66,7 @@ cd LG-competition
 
 Next make sure you are in the correct directory and set up the virtual environment:
 
-```
+```sh
 virtualenv --python=python3.6 venv
 source venv/bin/activate
 pip install -r requirements.txt
@@ -77,13 +77,13 @@ To test whether everything works as expected, you can try to run the example wit
 
 First make sure the simulator is running in the background. If so, run:
 
-```
+```sh
 python -m examples.random_agent
 ```
 
 If successful, you should see something similar to the following printed in the console:
 
-```
+```console
 Shape of observations: (13, 9, 17)
 Chosen action: 24
 Reward: -0.6, finished level: False, additional info: {'valid_steps': 0, 'total_steps': 1, 'successful_click': False, 'new_progress': 45, 'goal_reached': False}
@@ -99,7 +99,7 @@ Level 2 final reward: 6.900000000000006
 ## Connection errors
 A common error is a connection error. The Python error message looks something like this:
 
-```
+```python
 requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8090):
 Max retries exceeded with url: /load (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f934855c278>:
 Failed to establish a new connection: [Errno 61] Connection refused',))
@@ -107,13 +107,13 @@ Failed to establish a new connection: [Errno 61] Connection refused',))
 
 If that is the case, verify that the simulator is running and open to the correct port (here 8090).
 
-```
+```sh
 docker ps
 ```
 
 should give something like this:
 
-```
+```console
 CONTAINER ID   IMAGE          COMMAND                  CREATED        STATUS         PORTS                    NAMES
 0497d9ba2b90   lg-simulator   "/bin/sh -c ./linux.…"   3 months ago   Up 4 minutes   0.0.0.0:8090->8080/tcp   lg-simulator-local
 ```
