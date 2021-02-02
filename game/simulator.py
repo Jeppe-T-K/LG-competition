@@ -19,12 +19,6 @@ class BaseSimulator(object):
             'y': y
         })
 
-    # def session_create(self, state: any, return_full_state: bool = False) -> any:
-    #     return self._do_request('/session/create', {
-    #         'state': state,
-    #         'returnFullState': return_full_state
-    #     })
-
     def session_create(self, level: int, seed: int, return_full_state: bool = False) -> any:
         return self._do_request('/session/create', {
             'levelIndex': level,
@@ -75,7 +69,6 @@ class BaseSimulator(object):
 
 
 class Simulator(BaseSimulator):
-
     def __init__(self, host: str, **kwargs):
         super().__init__(host, **kwargs)
         self.sessionId = None
