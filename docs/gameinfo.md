@@ -6,7 +6,7 @@ subtitle: Lily's Garden gameplay
 
 # Puzzle Game Mechanics
 
-The gameplay in Lily's Garden is a simple blast-type puzzle game, where the main gameplay objective is to collect all objectives in a level within a given movelimit.
+The gameplay in <a href="https://apps.apple.com/dk/app/lilys-garden-design-relax/id1437783446">Lily's Garden</a> is a blast-type puzzle game, where the main gameplay objective is to collect all objectives in a level within a given movelimit.
 An example of how a typical level looks like is shown below:
 
 ![Gameboard with description](assets/img/gameboard.png)
