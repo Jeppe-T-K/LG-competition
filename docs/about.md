@@ -7,14 +7,14 @@ gh-repo: Jeppe-T-K/LG-competition
 
 # Overview
 
-The Tactile Games Playtest Agent competition is based on the mobile puzzle game Lily's Garden - a match-3 style puzzle game where player must complete the levels within a given number of moves.
-The objective of this competition is to accurately predict the player completion rate of these puzzle levels.
-The main research contribution of the competition is not how to optimally plan and play games but rather how to create playtesting methods that are conditioned by aggregated player behavior data across millions of players.
+The <a href="https://tactilegames.com/">Tactile Games</a> Playtest Agent competition is based on our game <a href="https://tactilegames.com/lilys-garden/">Lily's Garden</a>. The objective of this competition is to develop an agent capable of accurately predicting the difficulty of a series of evaluation levels. In this context, <em>level difficulty</em> will be understood as the average number of attempts that a human player makes before completing the level. Equivalently, one can also consider the level's <em>completion rate</em> which is simply defined as 1 divided by level difficulty. 
 
-We provide a modified version of the game that enables simulating the main gameplay as well as data (completion rate, move limit) on the given levels.
-The participants are expected to create a playtesting agent which can match the player completion rate of a level. By using the number of moves spent by the agent to complete a given level across several attempts, the completion rate is then determined by calculating the fraction of attempts that finish within a given move limit.
-They are allowed to make use of the simulator and player data in any way they can otherwise.
-Their method will be evaluated on a number of held-out levels which include both previous and new mechanics. The winner will be the one that achieves the lowest mean relative error in completion rate on the evaluation levels.
+Participants in this competition will have access to a modified version of the game that enables simulating the main gameplay. Data from real players (i.e., completion rate) on the training levels will be provided as well. 
+
+The competition is about predicting level difficulty as opposed to developing an agent capable of playing the game optimally or super-human like. Consequently, the participants are expected to work on a playtesting agent from which one can determine how difficult the level will be if played by a human.
+
+The agentes developed will be evaluated on a number of held-out levels which will include both levels similar to the ones used for training, and some levels containing unique combinations of mechanics. The winner will be the one that achieves the lowest mean relative error in completion rate on the evaluation levels.
+
 
 
 ## Getting started
