@@ -2,6 +2,10 @@
 layout: page
 title: Game Overview
 subtitle: Lily's Garden gameplay
+output: 
+  html_document:
+    includes:
+       in_header: ga_global_site_tag.htm
 ---
 
 # Puzzle Game Mechanics
