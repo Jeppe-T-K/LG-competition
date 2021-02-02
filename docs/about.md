@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Tactile Games Playtest Agent
-subtitle: Completion Rate Prediction of Lily's Garden Levels
+subtitle: Level Difficulty Prediction of Lily's Garden Levels
 gh-repo: Jeppe-T-K/LG-competition
 ---
 
