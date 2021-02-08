@@ -1,5 +1,12 @@
 ---
-layout: page
+layout: 'redirect'
+redir_to: 'about'
+sitemap: false
+---
+
+
+<!-- ---
+layout: home
 title: Tactile Games Playtest Agent
 subtitle: Level Difficulty Prediction of Lily's Garden Levels
 ---
@@ -14,7 +21,7 @@ Participants in this competition will have access to a modified version of the g
 
 The competition is about predicting level difficulty as opposed to developing an agent capable of playing the game optimally or super-human like. Consequently, the participants are expected to work on a playtesting agent from which one can determine how difficult the level will be if played by a human.
 
-The agents developed will be evaluated on a number of held-out levels which will include both levels similar to the ones used for training, and some levels containing unique combinations of mechanics. The winner will be the one that achieves the lowest mean relative error in completion rate on the evaluation levels.
+The agentes developed will be evaluated on a number of held-out levels which will include both levels similar to the ones used for training, and some levels containing unique combinations of mechanics. The winner will be the one that achieves the lowest mean relative error in completion rate on the evaluation levels.
 
 
 
@@ -36,4 +43,4 @@ An overview of the levels along with the data can be found on the [Levels](level
 
 As mentioned, the agents will be evaluated on a number of held-out levels. To do this, we let the agent play through these levels 2000 times each and note down the number of valid steps taken to complete these levels. The agent completion rate is then simply calculated as the number of runs that finished within the given move limit of the level.
 
-The winner will be the contestant(s) that achieves the lowest mean relative difference between the agent and player completion rates.
+The winner will be the contestant(s) that achieves the lowest mean relative difference between the agent and player completion rates. -->
