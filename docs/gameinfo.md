@@ -58,7 +58,7 @@ Flask + flask|13 x 9|Attacks the whole board.
     <th>Image</th>
     <th>Name [tutorial level]</th>
     <th>Game Id</th>
-    <th><a href="http://localhost:3000/environment">Channels</a></th>
+    <th><a href="http://aicompetition.tactilegames.com/environment">Channels</a></th>
     <th>Additional information</th>
 
   </tr>
@@ -70,6 +70,13 @@ Flask + flask|13 x 9|Attacks the whole board.
   <td>PopCorn</td>
   <td>8, 15, 21, 22</td>
   <td> Blocker with gravity. </td>
+</tr>
+
+<td> <img src="{{ 'assets/img/1HP_Blocker_wGravity_Dispencer.png'  | relative_url }}"  alt="BlockerWithGravityDispenser" width = 75px height = 75px></td>
+  <td>Dandelion spawner(1hp) </td>
+  <td>BlockerWithGravityDispenser</td>
+  <td>8, 18, 21, 22</td>
+  <td> Spawns a daffodil anywhere on the board when matched next to. </td>
 </tr>
 
 <tr>
@@ -97,11 +104,19 @@ Flask + flask|13 x 9|Attacks the whole board.
 </tr>
 
 <tr>
+  <td> <img src="{{ 'assets/img/BubbleDispenser.png' | relative_url }}"  alt="bubble dispenser" width = 75px height = 75px></td>
+    <td>Bubble dispenser (1hp)</td>
+    <td>BubbleDispenser</td>
+    <td>18, 21</td>
+    <td>Static piece that spawns bubbles anywhere on the board when hit. </td>
+</tr>
+
+<tr>
   <td> <img src="{{ 'assets/img/1HP_BubbleDispenser_wGravity.png' | relative_url }}"  alt="bubble dispenser" width = 75px height = 75px></td>
     <td>Bubble dispenser (1hp)</td>
     <td>BubbleDispenser3x3</td>
     <td>15, 18, 21</td>
-    <td> Spawns bubble in a circle around it. </td>
+    <td> Spawns bubbles in a circle around it. </td>
 </tr>
 
 <tr>
@@ -161,6 +176,14 @@ Flask + flask|13 x 9|Attacks the whole board.
 </tr>
 
 <tr>
+  <td> <img src="{{ 'assets/img/Blocker_Hard.png' | relative_url }}"  alt="megahardblocker" width = 75px height = 75px></td>
+    <td>Picnic basket (3hp) [22]</td>
+    <td>MegaHardBlocker</td>
+    <td>8, 15, 22</td>
+    <td> 2x2 blocker, only possible to remove with power pieces. </td>
+</tr>
+
+<tr>
   <td> <img src="{{ 'assets/img/cage.png' | relative_url }}"  alt="cage" width = 75px height = 75px></td>
     <td>Bird net (1hp) [17]</td>
     <td>Cage</td>
@@ -207,4 +230,29 @@ Flask + flask|13 x 9|Attacks the whole board.
     <td>8, 15, 21, 22</td>
     <td> Blocker with gravity and 3hp. </td>
 </tr>
+
+<tr>
+  <td> <img src="{{ 'assets/img/2HP_ConsecutiveBlocker_wGravity_St2.png' | relative_url }}"  alt="consecutiveblockerwithgravity" width = 75px height = 75px></td>
+    <td>Polaroid (2hp)</td>
+    <td>ConsecutiveBlockerWithGravity</td>
+    <td>8, 15, 17, 21, 22</td>
+    <td> Regenerates 1 hp per round if not attacked, requiring two consecutive hits to remove. </td>
+</tr>
+
+<tr>
+  <td> <img src="{{ 'assets/img/2HP_ConsecutiveBlocker_wGravity_St2.png' | relative_url }}"  alt="consecutiveblockerwithgravity" width = 75px height = 75px></td>
+    <td>Treasure chest (2hp)</td>
+    <td>ConsecutiveBlocker</td>
+    <td>8, 17, 21, 22</td>
+    <td> Same as above, but static (no gravity). </td>
+</tr>
+
+<tr>
+  <td> <img src="{{ 'assets/img/Blocker_5HP_Stage1_NuggetBig_01.png' | relative_url }}"  alt="goldnugget" width = 75px height = 75px></td>
+    <td>Gold Nugget (1hp)</td>
+    <td>GoldNugget</td>
+    <td>8, 21, 22</td>
+    <td> Gold nugget is hidden in rocks, making it impossible for players to know which rocks to hit. Can change per round. </td>
+</tr>
+
 </table>
