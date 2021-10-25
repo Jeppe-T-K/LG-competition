@@ -176,7 +176,7 @@ Flask + flask|13 x 9|Attacks the whole board.
 </tr>
 
 <tr>
-  <td> <img src="{{ 'assets/img/Blocker_Hard.png' | relative_url }}"  alt="megahardblocker" width = 75px height = 75px></td>
+  <td> <img src="{{ 'assets/img/picnicbasket.png' | relative_url }}"  alt="megahardblocker" width = 75px height = 75px></td>
     <td>Picnic basket (3hp) [22]</td>
     <td>MegaHardBlocker</td>
     <td>8, 15, 22</td>
@@ -203,6 +203,7 @@ Flask + flask|13 x 9|Attacks the whole board.
   <td>
   </td>
     <td>Teleport [28]</td>
+    <td>Teleport</td>
     <td>-</td>
     <td> No good way to represent it, basically leads to random board state. </td>
 </tr>
@@ -252,7 +253,31 @@ Flask + flask|13 x 9|Attacks the whole board.
     <td>Gold Nugget (1hp)</td>
     <td>GoldNugget</td>
     <td>8, 21, 22</td>
-    <td> Gold nugget is hidden in rocks, making it impossible for players to know which rocks to hit. Can change per round. </td>
+    <td> Gold nugget is hidden in rocks, making it impossible for players to know which rocks to hit. Changes between games. </td>
+</tr>
+
+<tr>
+  <td> <img src="{{ 'assets/img/ContiguousBlocker.png' | relative_url }}"  alt="ContiguousBlocker" width = 75px height = 75px></td>
+    <td>Light Chain (1hp)</td>
+    <td>ContiguousBlocker</td>
+    <td>8, 21, 22</td>
+    <td> Chain of lights where each light needs to be destroyed before the chain disappears. </td>
+</tr>
+
+<tr>
+  <td> <img src="{{ 'assets/img/SwitchCollectableFlower.png' | relative_url }}"  alt="switchcollactable" width = 75px height = 75px></td>
+    <td>Blooming Flower (1hp)</td>
+    <td>SwitchCollactable</td>
+    <td>8, 21, 22</td>
+    <td> The flower can only be collected when active (typically 2 turns). Typically has a max number of active flowers on the board at a time</td>
+</tr>
+
+<tr>
+  <td> <img src="{{ 'assets/img/SpaceRocket.png' | relative_url }}"  alt="spacerocket" width = 75px height = 75px></td>
+    <td>Space Rocket (1hp)</td>
+    <td>SpaceRocket</td>
+    <td>1-6, 13-14, 19, 20 /td>
+    <td> 2x1/1x2 rocket that requires to be filled before it can be launched. </td>
 </tr>
 
 </table>

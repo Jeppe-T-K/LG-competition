@@ -11,7 +11,7 @@ When referring to the simulator, we mean the Unity build of the game that you ar
 
 `multichannelArrayState` contains all the relevant info of the current state in a flattened dictionary. The data consist of:
 * `board`: Flattened vector of size `13*9*24`, following the formula `channelIndex * BOARD_WIDTH * BOARD_HEIGHT + xy[0]+xAdd + (xy[1]+yAdd) * BOARD_WIDTH`, where `xy = (index_x, index_y)` and `xAdd/yAdd > 0` if the piece is larger than 1x1
-* `normList`: Suggested values to normalise board channels to be between 0 - 1. Note the values may exceed this interval in some levels, hence only a suggested list. 
+* `normList`: Suggested values to normalise board channels to be between 0 - 1. Note the values may exceed this interval in some levels, hence only a suggested list.
 * `collectGoalIdList`: List of individual collect goal ids. Note it does not inform about specific colors.
 * `collectGoalGoalList`: List of individual collect goal objectives.
 * `collectGoalRemaininglList`: List of individual collect goals remaining.
@@ -53,7 +53,7 @@ Creates a new playthrough of a specific level. This is the main function for pla
 
 * URL: `/session/create`
 * Input: `returnFullState:bool`, `levelIndex:int`, `seed:int`
-* Output: `sessionId:string`, `multichannelArrayState:string`, `levelName:string`, `levelMoveLimit:int`
+* Output: `sessionId:string`, `multichannelArrayState:string`, `levelName:string`, `levelMoveLimit:int`, `validActionPositions:list<list<int>>`
 
 ### Session click
 
@@ -63,7 +63,7 @@ It is also possible to do a one-step look-ahead by using the `dryRun` flag.
 
 * URL: `/session/click`
 * Input: `sessionId:string`, `returnFullState:bool`, `x:int`, `y:int`, `dryRun:bool`
-* Output: `clickSuccessful:bool`, `simulationResult:string`, `multichannelArrayState:string`, `fullState:string`
+* Output: `clickSuccessful:bool`, `simulationResult:string`, `multichannelArrayState:string`, `fullState:string`, `validActionPositions:list<list<int>>`
 
 ### Session status
 
