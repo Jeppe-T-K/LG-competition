@@ -241,7 +241,7 @@ Flask + flask|13 x 9|Attacks the whole board.
 </tr>
 
 <tr>
-  <td> <img src="{{ 'assets/img/2HP_ConsecutiveBlocker_wGravity_St2.png' | relative_url }}"  alt="consecutiveblockerwithgravity" width = 75px height = 75px></td>
+  <td> <img src="{{ 'assets/img/consecutiveblockernogravity.png' | relative_url }}"  alt="consecutiveblockernogravity" width = 75px height = 75px></td>
     <td>Treasure chest (2hp)</td>
     <td>ConsecutiveBlocker</td>
     <td>8, 17, 21, 22</td>
@@ -267,9 +267,9 @@ Flask + flask|13 x 9|Attacks the whole board.
 <tr>
   <td> <img src="{{ 'assets/img/SwitchCollectableFlower.png' | relative_url }}"  alt="switchcollactable" width = 75px height = 75px></td>
     <td>Blooming Flower (1hp)</td>
-    <td>SwitchCollactable</td>
+    <td>SwitchCollectable</td>
     <td>8, 21, 22</td>
-    <td> The flower can only be collected when active (typically 2 turns). Typically has a max number of active flowers on the board at a time</td>
+    <td> The flower can only be collected when active (typically 2 turns). Typically has a max number of active flowers on the board at a time. </td>
 </tr>
 
 <tr>
