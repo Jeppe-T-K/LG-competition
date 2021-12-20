@@ -45,6 +45,7 @@ Channel | Name | Description
 19|Colorable|Can take on the color the piece is attack with or random if done with power piece.
 20-23|Hittable by piece / neighbor / power / cluster|How a board piece can be attacked. Piece: tap on single piece. Neighbor: matching adjacent pieces. Power: hittable by power pieces. Cluster: tap on 2+ pieces together.
 24-25|Destructible/Indestructible|Whether the piece can be destroyed or not. Examples of indestructible pieces are spawners, endless collectors and teleports.
+26|Gatherer|Spacerocket, where the number indicates how many basic pieces that need to be collected.
 
 As an example, a basic red piece with 1 hitpoint in index position (0, 0) [lower left corner] that is also a collectgoal will be represented by:
 

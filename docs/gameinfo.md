@@ -275,7 +275,7 @@ Flask + flask|13 x 9|Attacks the whole board.
   <td> <img src="{{ 'assets/img/SpaceRocket.png' | relative_url }}"  alt="spacerocket" width = 75px height = 75px></td>
     <td>Space Rocket (1hp)</td>
     <td>SpaceRocket</td>
-    <td>1-6, 13-14, 19, 20 /td>
+    <td>1-6, 19, 20, 26 /td>
     <td> 2x1/1x2 rocket that requires to be filled before it can be launched. </td>
 </tr>
 
