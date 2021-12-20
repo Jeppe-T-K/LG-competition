@@ -18,6 +18,13 @@ When referring to the simulator, we mean the Unity build of the game that you ar
 * `collectGoalGoal`: Sum of all collect goals objectives.
 * `collectGoalRemaining`: Sum of all remaining collect goals.
 
+Additional returned info typically includes:
+* `remainingGoalsDistance`: List of collect goals where the following info is given for each:
+  * `ìd`: Type of collectgoal
+  * `distance`: Estimate of how many steps required to collect the remaining collectgoals. Rather than simply returning the number of collect goals, it instead 1) uses the remaining hitspoints 2) double the number if it is a "hard" piece (requires a power piece to collect).
+* `validActionPositions`: List of the (x, y) positions that result in an attack/valid move.
+* `levelMoveLimit`: The move limit for the given level. Note that the simulator allows you to take more moves than this.
+* `levelName`: Name identifier for the level.
 
 
 

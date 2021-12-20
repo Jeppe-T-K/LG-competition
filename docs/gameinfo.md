@@ -60,7 +60,6 @@ Flask + flask|13 x 9|Attacks the whole board.
     <th>Game Id</th>
     <th><a href="http://aicompetition.tactilegames.com/environment">Channels</a></th>
     <th>Additional information</th>
-
   </tr>
 </thead>
 
