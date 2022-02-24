@@ -52,9 +52,13 @@ Flask + flask|13 x 9|Attacks the whole board.
 
 ## Other board pieces
 
-<div class="headercontainer">
-<div class="tablecontainer">
-<table id="board_pieces">
+<table id="board_pieces" width="100%">
+	<col style="width:10%">
+	<col style="width:10%">
+	<col style="width:20%">
+  <col style="width:20%">
+  <col style="width:40%">
+
 <thead>
   <tr>
     <th>Image</th>
@@ -281,5 +285,3 @@ Flask + flask|13 x 9|Attacks the whole board.
 </tr>
 
 </table>
-</div>
-</div>
