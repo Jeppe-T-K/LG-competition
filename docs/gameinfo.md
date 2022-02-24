@@ -61,7 +61,7 @@ Flask + flask|13 x 9|Attacks the whole board.
     <th>Name [tutorial level]</th>
     <th>Game Id</th>
     <th><a href="http://aicompetition.tactilegames.com/environment">Channels</a></th>
-    <th>Additional information</th>
+    <th><a href="http://aicompetition.tactilegames.com/pieceoverview">Additional information</a></th>
   </tr>
 </thead>
 
@@ -201,8 +201,7 @@ Flask + flask|13 x 9|Attacks the whole board.
 </tr>
 
 <tr>
-  <td>
-  </td>
+  <td>NaN  </td>
     <td>Teleport [28]</td>
     <td>Teleport</td>
     <td>-</td>
